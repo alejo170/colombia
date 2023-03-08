@@ -1,0 +1,43 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-shadow: var(--blue) 10px 10px 10px;
+  background: url(../../../src/assets/error404.png) var(--black);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  height: 79vh;
+  padding-right: 5%;
+}
+
+.error h1 {
+  font-size: 6rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.error p {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.error a {
+  width: 5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 15px;
+  margin-top: 2rem;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.error a:hover {
+  box-shadow: 0 0 15px var(--blue);
+  background: var(--red);
+  color: var(--white);
+  transition: box-shadow 0.5s ease-in-out;
+}
