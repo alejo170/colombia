@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import Departments from "./pages/Departments/Departments";
 import TouristicAttraction from "./pages/TouristicAttraction/TouristicAttraction";
 import Presidents from "./pages/Presidents/Presidents";
-import Maps from "./pages/Maps/maps";
+import Maps from "./pages/Maps/Maps";
 import InvasiveSpecie from "./pages/InvasiveSpecie/InvasiveSpecie";
 import NativeCommunity from "./pages/NativeCommunity/NativeCommunity";
 import Error404 from "./pages/Error404/Error404";
