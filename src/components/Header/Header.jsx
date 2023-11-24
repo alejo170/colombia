@@ -1,20 +1,47 @@
-import { ContainerHeader, ContainerNav } from "./StyledHeader";
+import React, { useState } from "react";
 import LinkActive from "../LinkActive/LinkActive";
+import "./Navbar.css";
 
 const Header = ({ logo, alt }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <ContainerHeader>
-      <figure>
-        <img src={logo} alt={alt} />
+    <header className="navbar">
+      <figure className="nav_logo">
+        <img src={logo} alt={alt} width={160} />
       </figure>
-      <ContainerNav>
-        <LinkActive to="/">Inicio</LinkActive>
-        <LinkActive to="/departments">Departamentos</LinkActive>
-        <LinkActive to="/touristic">Turismo</LinkActive>
-        <LinkActive to="/presidents">Presidentes</LinkActive>
-      </ContainerNav>
-    </ContainerHeader>
+
+      <ul className={`nav_items ${isOpen && "open"}`}>
+        <LinkActive to="/" onClick={() => setIsOpen(!isOpen)}>
+          Inicio
+        </LinkActive>
+        <LinkActive to="/departments" onClick={() => setIsOpen(!isOpen)}>
+          Departamentos
+        </LinkActive>
+        <LinkActive to="/touristic" onClick={() => setIsOpen(!isOpen)}>
+          Turismo
+        </LinkActive>
+        <LinkActive to="/presidents" onClick={() => setIsOpen(!isOpen)}>
+          Presidentes
+        </LinkActive>
+        <LinkActive to="/maps" onClick={() => setIsOpen(!isOpen)}>
+          Mapas
+        </LinkActive>
+        <LinkActive to="/invasive" onClick={() => setIsOpen(!isOpen)}>
+          Especies
+        </LinkActive>
+        <LinkActive to="/community" onClick={() => setIsOpen(!isOpen)}>
+          Comunidades
+        </LinkActive>
+      </ul>
+      <div
+        className={`nav_toggle ${isOpen && "open"}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
   );
 };
-
 export default Header;

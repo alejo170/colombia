@@ -8,6 +8,8 @@
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
   color: var(--black);
+  -webkit-tap-highlight-color: transparent;  
+  /* cuando se da click en un enlace, y antes de redireccionar a dicho link, en un pequeño instante se pone un background azul */
 }
 
 :root {
@@ -18,3 +20,4 @@
   --gris: #e6e6e6;
   --grisOscuro: #5a5a6e;
 }
+

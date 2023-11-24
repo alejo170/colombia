@@ -1,3 +1,4 @@
+import { useState } from "react"; // Importa el hook useState
 import { NavLink } from "react-router-dom";
 import "./LinkActive.css";
 
